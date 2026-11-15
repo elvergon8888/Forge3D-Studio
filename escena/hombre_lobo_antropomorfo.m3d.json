@@ -1,0 +1,3459 @@
+{
+  "formato": "m3d-json",
+  "version": 1,
+  "nombre": "hombre_lobo_antropomorfo",
+  "guardado": "2026-11-15T02:26:46Z",
+  "generador": "Forge3D Studio 1.0.1",
+  "objetos": [
+    {
+      "id": "obj_0002",
+      "nombre": "Torso_Muscular",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0,
+        3.0799999237060547,
+        0.03999999910593033
+      ],
+      "rotacion": [
+        5,
+        0,
+        0
+      ],
+      "escala": [
+        0.6200000047683716,
+        0.8600000143051147,
+        0.4399999976158142
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0003",
+      "nombre": "Cadera",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0,
+        1.1200000047683716,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.46000000834465027,
+        0.3400000035762787,
+        0.36000001430511475
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0004",
+      "nombre": "Pecho",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0,
+        3.430000066757202,
+        0.03999999910593033
+      ],
+      "rotacion": [
+        5,
+        0,
+        0
+      ],
+      "escala": [
+        0.5600000023841858,
+        0.4399999976158142,
+        0.4000000059604645
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0005",
+      "nombre": "Abdomen",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0,
+        2.630000114440918,
+        0.029999999329447746
+      ],
+      "rotacion": [
+        5,
+        0,
+        0
+      ],
+      "escala": [
+        0.4399999976158142,
+        0.4000000059604645,
+        0.3400000035762787
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0006",
+      "nombre": "Hombro_L",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        -0.6599999666213989,
+        3.5799999237060547,
+        0.05000000074505806
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.30000001192092896,
+        0.2800000011920929,
+        0.30000001192092896
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0007",
+      "nombre": "Hombro_R",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0.6599999666213989,
+        3.5799999237060547,
+        0.05000000074505806
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.30000001192092896,
+        0.2800000011920929,
+        0.30000001192092896
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0008",
+      "nombre": "Trapecio",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0,
+        1.9199999570846558,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.4399999976158142,
+        0.23999999463558197,
+        0.30000001192092896
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0009",
+      "nombre": "BrazoSup_L",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        -0.46000000834465027,
+        1.5199999809265137,
+        0
+      ],
+      "rotacion": [
+        -30,
+        0,
+        -52
+      ],
+      "escala": [
+        0.17000000178813934,
+        0.5199999809265137,
+        0.17000000178813934
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0010",
+      "nombre": "BrazoInf_L",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        -0.5600000023841858,
+        1.1799999475479126,
+        0
+      ],
+      "rotacion": [
+        -55,
+        0,
+        -32
+      ],
+      "escala": [
+        0.15000000596046448,
+        0.5,
+        0.15000000596046448
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0011",
+      "nombre": "BrazoSup_R",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        0.46000000834465027,
+        1.5199999809265137,
+        0
+      ],
+      "rotacion": [
+        -30,
+        0,
+        52
+      ],
+      "escala": [
+        0.17000000178813934,
+        0.5199999809265137,
+        0.17000000178813934
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0012",
+      "nombre": "BrazoInf_R",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        0.5600000023841858,
+        1.1799999475479126,
+        0
+      ],
+      "rotacion": [
+        -55,
+        0,
+        32
+      ],
+      "escala": [
+        0.15000000596046448,
+        0.5,
+        0.15000000596046448
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0013",
+      "nombre": "Antebrazo_L",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        -0.5600000023841858,
+        1.0499999523162842,
+        0
+      ],
+      "rotacion": [
+        -25,
+        0,
+        -18
+      ],
+      "escala": [
+        0.1899999976158142,
+        0.4399999976158142,
+        0.1899999976158142
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0014",
+      "nombre": "Antebrazo_R",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0.5600000023841858,
+        1.0499999523162842,
+        0
+      ],
+      "rotacion": [
+        -25,
+        0,
+        18
+      ],
+      "escala": [
+        0.1899999976158142,
+        0.4399999976158142,
+        0.1899999976158142
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0015",
+      "nombre": "Mano_L",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        -1.409999966621399,
+        2.200000047683716,
+        0.18000000715255737
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.20000000298023224,
+        0.2199999988079071,
+        0.14000000059604645
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0016",
+      "nombre": "Mano_R",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        1.409999966621399,
+        2.200000047683716,
+        0.18000000715255737
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.20000000298023224,
+        0.2199999988079071,
+        0.14000000059604645
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0017",
+      "nombre": "Garra_L",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -1.409999966621399,
+        1.8799999952316284,
+        0.3500000238418579
+      ],
+      "rotacion": [
+        -60,
+        0,
+        0
+      ],
+      "escala": [
+        0.019999999552965164,
+        0.019999999552965164,
+        0.03839999809861183
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.11999999731779099,
+          0.10999999940395355,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0.3499999940395355,
+        "roughness": 0.3199999928474426,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0018",
+      "nombre": "Garra_R",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        1.409999966621399,
+        1.8799999952316284,
+        0.3500000238418579
+      ],
+      "rotacion": [
+        -60,
+        0,
+        0
+      ],
+      "escala": [
+        0.019999999552965164,
+        0.019999999552965164,
+        0.03839999809861183
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.11999999731779099,
+          0.10999999940395355,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0.3499999940395355,
+        "roughness": 0.3199999928474426,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0019",
+      "nombre": "GarraL2_L",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -1.4300000667572021,
+        1.899999976158142,
+        0.17000000178813934
+      ],
+      "rotacion": [
+        -25,
+        0,
+        0
+      ],
+      "escala": [
+        0.019999999552965164,
+        0.019999999552965164,
+        0.025999998673796654
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.11999999731779099,
+          0.10999999940395355,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0.3499999940395355,
+        "roughness": 0.3199999928474426,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0020",
+      "nombre": "GarraL2_R",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        1.4300000667572021,
+        1.899999976158142,
+        0.17000000178813934
+      ],
+      "rotacion": [
+        -25,
+        0,
+        0
+      ],
+      "escala": [
+        0.019999999552965164,
+        0.019999999552965164,
+        0.025999998673796654
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.11999999731779099,
+          0.10999999940395355,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0.3499999940395355,
+        "roughness": 0.3199999928474426,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0021",
+      "nombre": "Muslo_L",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        -0.3499999940395355,
+        1.5699999332427979,
+        0.029999999329447746
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.20999999344348907,
+        0.5400000214576721,
+        0.20999999344348907
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0022",
+      "nombre": "Muslo_R",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        0.3499999940395355,
+        1.5699999332427979,
+        -0.019999999552965164
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.20999999344348907,
+        0.5400000214576721,
+        0.20999999344348907
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0023",
+      "nombre": "Pantorrilla_L",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        -0.36000001430511475,
+        0.7200000286102295,
+        0.05000000074505806
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.1599999964237213,
+        0.5199999809265137,
+        0.1599999964237213
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0024",
+      "nombre": "Pantorrilla_R",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        0.36000001430511475,
+        0.7200000286102295,
+        -0.029999999329447746
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.1599999964237213,
+        0.5199999809265137,
+        0.1599999964237213
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0025",
+      "nombre": "Pie_L",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        -0.36000001430511475,
+        0.11999999731779099,
+        0.18000000715255737
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.20000000298023224,
+        0.11999999731779099,
+        0.30000001192092896
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0026",
+      "nombre": "Pie_R",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0.36000001430511475,
+        0.11999999731779099,
+        0.15000000596046448
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.20000000298023224,
+        0.11999999731779099,
+        0.30000001192092896
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0027",
+      "nombre": "Uña_L",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -0.1599999964237213,
+        0.029999999329447746,
+        0.1599999964237213
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.03999999910593033,
+        0.029999999329447746,
+        0.09000000357627869
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.11999999731779099,
+          0.10999999940395355,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0.3499999940395355,
+        "roughness": 0.3199999928474426,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0028",
+      "nombre": "Uña_R",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0.1599999964237213,
+        0.029999999329447746,
+        0.1599999964237213
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.03999999910593033,
+        0.029999999329447746,
+        0.09000000357627869
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.11999999731779099,
+          0.10999999940395355,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0.3499999940395355,
+        "roughness": 0.3199999928474426,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0029",
+      "nombre": "Cuello",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        0,
+        2.0199999809265137,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.2199999988079071,
+        0.18000000715255737,
+        0.2199999988079071
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0030",
+      "nombre": "Craneo",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0,
+        2.240000009536743,
+        0
+      ],
+      "rotacion": [
+        22,
+        0,
+        0
+      ],
+      "escala": [
+        0.36000001430511475,
+        0.3400000035762787,
+        0.4000000059604645
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.12999999523162842,
+          0.09000000357627869,
+          0.05999999865889549,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8799999952316284,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0031",
+      "nombre": "Craneo_Back",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0,
+        2.240000009536743,
+        -0.10000000149011612
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.3400000035762787,
+        0.3199999928474426,
+        0.25999999046325684
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.12999999523162842,
+          0.09000000357627869,
+          0.05999999865889549,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8799999952316284,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0032",
+      "nombre": "Hocico",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        0,
+        2.180000066757202,
+        0.20000000298023224
+      ],
+      "rotacion": [
+        10,
+        0,
+        0
+      ],
+      "escala": [
+        0.20000000298023224,
+        0.1599999964237213,
+        0.30000001192092896
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0033",
+      "nombre": "Nariz",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0,
+        2.190000057220459,
+        0.3199999928474426
+      ],
+      "rotacion": [
+        10,
+        0,
+        0
+      ],
+      "escala": [
+        0.09000000357627869,
+        0.07999999821186066,
+        0.09000000357627869
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0034",
+      "nombre": "Mandibula",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0,
+        2.0799999237060547,
+        0.14000000059604645
+      ],
+      "rotacion": [
+        10,
+        0,
+        0
+      ],
+      "escala": [
+        0.18000000715255737,
+        0.10000000149011612,
+        0.20000000298023224
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.46000000834465027,
+          0.4399999976158142,
+          0.4300000071525574,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.7200000286102295,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0035",
+      "nombre": "Dientes",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0,
+        2.130000114440918,
+        0.23999999463558197
+      ],
+      "rotacion": [
+        10,
+        0,
+        0
+      ],
+      "escala": [
+        0.17000000178813934,
+        0.05000000074505806,
+        0.14000000059604645
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.9300000071525574,
+          0.9200000166893005,
+          0.8600000143051147,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.2800000011920929,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0036",
+      "nombre": "Oreja_L",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        -0.36000001430511475,
+        4.880000114440918,
+        -0.029999999329447746
+      ],
+      "rotacion": [
+        -12,
+        0,
+        -44
+      ],
+      "escala": [
+        0.07000000029802322,
+        0.1599999964237213,
+        0.05000000074505806
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.12999999523162842,
+          0.09000000357627869,
+          0.05999999865889549,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8799999952316284,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0037",
+      "nombre": "Oreja_R",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        0.36000001430511475,
+        4.880000114440918,
+        -0.029999999329447746
+      ],
+      "rotacion": [
+        -12,
+        0,
+        44
+      ],
+      "escala": [
+        0.07000000029802322,
+        0.1599999964237213,
+        0.05000000074505806
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.12999999523162842,
+          0.09000000357627869,
+          0.05999999865889549,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8799999952316284,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0038",
+      "nombre": "Ojo_L",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        -0.15000000596046448,
+        4.519999980926514,
+        0.3199999928474426
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.07000000029802322,
+        0.05999999865889549,
+        0.05999999865889549
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          1,
+          0.6200000047683716,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.15000000596046448,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0039",
+      "nombre": "Ojo_R",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0.15000000596046448,
+        4.519999980926514,
+        0.3199999928474426
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.07000000029802322,
+        0.05999999865889549,
+        0.05999999865889549
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          1,
+          0.6200000047683716,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.15000000596046448,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0040",
+      "nombre": "Pupila_L",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        -0.15000000596046448,
+        4.519999980926514,
+        0.4300000071525574
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.03500000014901161,
+        0.03500000014901161,
+        0.029999999329447746
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          1,
+          0.6200000047683716,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.15000000596046448,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0041",
+      "nombre": "Pupila_R",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0.15000000596046448,
+        4.519999980926514,
+        0.4300000071525574
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.03500000014901161,
+        0.03500000014901161,
+        0.029999999329447746
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          1,
+          0.6200000047683716,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.15000000596046448,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0042",
+      "nombre": "NarizNegra",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0,
+        2.200000047683716,
+        0.33000001311302185
+      ],
+      "rotacion": [
+        10,
+        0,
+        0
+      ],
+      "escala": [
+        0.054999999701976776,
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.05999999865889549,
+          0.05000000074505806,
+          0.05000000074505806,
+          1
+        ],
+        "metallic": 0.10000000149011612,
+        "roughness": 0.3499999940395355,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0043",
+      "nombre": "Melena",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0,
+        4.619999885559082,
+        -0.25999999046325684
+      ],
+      "rotacion": [
+        24,
+        0,
+        0
+      ],
+      "escala": [
+        0.36000001430511475,
+        0.3400000035762787,
+        0.23999999463558197
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.12999999523162842,
+          0.09000000357627869,
+          0.05999999865889549,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8799999952316284,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0044",
+      "nombre": "Melena_Back",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0,
+        2.200000047683716,
+        -0.1599999964237213
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.3199999928474426,
+        0.30000001192092896,
+        0.1599999964237213
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.12999999523162842,
+          0.09000000357627869,
+          0.05999999865889549,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8799999952316284,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0045",
+      "nombre": "Greba",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        0,
+        1.899999976158142,
+        0.11999999731779099
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.3400000035762787,
+        0.18000000715255737,
+        0.18000000715255737
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.12999999523162842,
+          0.09000000357627869,
+          0.05999999865889549,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8799999952316284,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0046",
+      "nombre": "Mechon_L",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        -0.20000000298023224,
+        2.4000000953674316,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.03999999910593033,
+        0.14000000059604645,
+        0.03999999910593033
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.12999999523162842,
+          0.09000000357627869,
+          0.05999999865889549,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8799999952316284,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0047",
+      "nombre": "Mechon_R",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        0.20000000298023224,
+        2.4000000953674316,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.03999999910593033,
+        0.14000000059604645,
+        0.03999999910593033
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.12999999523162842,
+          0.09000000357627869,
+          0.05999999865889549,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8799999952316284,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0048",
+      "nombre": "Suelo",
+      "tipo": "primitiva",
+      "primitiva": "plano",
+      "posicion": [
+        0,
+        0,
+        -6
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        14,
+        1,
+        14
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.10000000149011612,
+          0.10999999940395355,
+          0.09000000357627869,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.949999988079071,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0049",
+      "nombre": "Suelo2",
+      "tipo": "primitiva",
+      "primitiva": "plano",
+      "posicion": [
+        0,
+        0,
+        6
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        14,
+        1,
+        14
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.10000000149011612,
+          0.10999999940395355,
+          0.09000000357627869,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.949999988079071,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0050",
+      "nombre": "Roca1",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -2.4000000953674316,
+        0.15000000596046448,
+        -1.600000023841858
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.8999999761581421,
+        0.550000011920929,
+        0.75
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.1899999976158142,
+          0.20000000298023224,
+          0.1899999976158142,
+          1
+        ],
+        "metallic": 0.05000000074505806,
+        "roughness": 0.8999999761581421,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0051",
+      "nombre": "Roca2",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        2.799999952316284,
+        0.20000000298023224,
+        -2.4000000953674316
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        1.100000023841858,
+        0.6499999761581421,
+        0.8999999761581421
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.1899999976158142,
+          0.20000000298023224,
+          0.1899999976158142,
+          1
+        ],
+        "metallic": 0.05000000074505806,
+        "roughness": 0.8999999761581421,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0052",
+      "nombre": "Roca3",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -3.5999999046325684,
+        0.11999999731779099,
+        1.7999999523162842
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.75,
+        0.44999998807907104,
+        0.6000000238418579
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.1899999976158142,
+          0.20000000298023224,
+          0.1899999976158142,
+          1
+        ],
+        "metallic": 0.05000000074505806,
+        "roughness": 0.8999999761581421,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0053",
+      "nombre": "Roca4",
+      "tipo": "primitiva",
+      "primitiva": "esfera",
+      "posicion": [
+        1.899999976158142,
+        0.18000000715255737,
+        2.200000047683716
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.6000000238418579,
+        0.5,
+        0.550000011920929
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.1899999976158142,
+          0.20000000298023224,
+          0.1899999976158142,
+          1
+        ],
+        "metallic": 0.05000000074505806,
+        "roughness": 0.8999999761581421,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0054",
+      "nombre": "Tronco1",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -4.199999809265137,
+        1.600000023841858,
+        -3.200000047683716
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.550000011920929,
+        3.5999999046325684,
+        0.550000011920929
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.1599999964237213,
+          0.11999999731779099,
+          0.09000000357627869,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.9399999976158142,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0055",
+      "nombre": "Tronco2",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        4.599999904632568,
+        1.7999999523162842,
+        -3.799999952316284
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.5,
+        4,
+        0.5
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.1599999964237213,
+          0.11999999731779099,
+          0.09000000357627869,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.9399999976158142,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0056",
+      "nombre": "Tronco3",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        -3.4000000953674316,
+        1.399999976158142,
+        3.5999999046325684
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.44999998807907104,
+        3.200000047683716,
+        0.44999998807907104
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.1599999964237213,
+          0.11999999731779099,
+          0.09000000357627869,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.9399999976158142,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0057",
+      "nombre": "Tronco4",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        3.799999952316284,
+        1.5,
+        3.200000047683716
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.47999998927116394,
+        3.4000000953674316,
+        0.47999998927116394
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.1599999964237213,
+          0.11999999731779099,
+          0.09000000357627869,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.9399999976158142,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0058",
+      "nombre": "Hoja1",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -1.2000000476837158,
+        0.019999999552965164,
+        0.8999999761581421
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.25999999046325684,
+        0.019999999552965164,
+        0.18000000715255737
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.30000001192092896,
+          0.2199999988079071,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8500000238418579,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0059",
+      "nombre": "Hoja2",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0.8999999761581421,
+        0.019999999552965164,
+        1.399999976158142
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.23999999463558197,
+        0.019999999552965164,
+        0.1599999964237213
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.30000001192092896,
+          0.2199999988079071,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8500000238418579,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0060",
+      "nombre": "Hoja3",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -0.4000000059604645,
+        0.019999999552965164,
+        -1.100000023841858
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.2800000011920929,
+        0.019999999552965164,
+        0.1899999976158142
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.30000001192092896,
+          0.2199999988079071,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8500000238418579,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0061",
+      "nombre": "Hoja4",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        1.600000023841858,
+        0.019999999552965164,
+        -0.5
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.2199999988079071,
+        0.019999999552965164,
+        0.15000000596046448
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.30000001192092896,
+          0.2199999988079071,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8500000238418579,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0062",
+      "nombre": "Hoja5",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -2.0999999046325684,
+        0.019999999552965164,
+        0.30000001192092896
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.25,
+        0.019999999552965164,
+        0.17000000178813934
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.30000001192092896,
+          0.2199999988079071,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8500000238418579,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0063",
+      "nombre": "Hoja6",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        2.299999952316284,
+        0.019999999552965164,
+        1.899999976158142
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.23000000417232513,
+        0.019999999552965164,
+        0.1599999964237213
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.30000001192092896,
+          0.2199999988079071,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8500000238418579,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0064",
+      "nombre": "Hoja7",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -1.7000000476837158,
+        0.019999999552965164,
+        -2.200000047683716
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.27000001072883606,
+        0.019999999552965164,
+        0.18000000715255737
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.30000001192092896,
+          0.2199999988079071,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8500000238418579,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0065",
+      "nombre": "Hoja8",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0.30000001192092896,
+        0.019999999552965164,
+        2.5999999046325684
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.20999999344348907,
+        0.019999999552965164,
+        0.14000000059604645
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.30000001192092896,
+          0.2199999988079071,
+          0.10000000149011612,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8500000238418579,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0066",
+      "nombre": "Chaleco",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0,
+        1.6200000047683716,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.6200000047683716,
+        0.5199999809265137,
+        0.4000000059604645
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.18000000715255737,
+          0.1599999964237213,
+          0.14000000059604645,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.9300000071525574,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0067",
+      "nombre": "Chaleco_Izq",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -0.30000001192092896,
+        1.600000023841858,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.11999999731779099,
+        0.4399999976158142,
+        0.36000001430511475
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.3400000035762787,
+          0.30000001192092896,
+          0.25999999046325684,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8999999761581421,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0068",
+      "nombre": "Chaleco_Der",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0.30000001192092896,
+        1.600000023841858,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.11999999731779099,
+        0.4399999976158142,
+        0.36000001430511475
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.3400000035762787,
+          0.30000001192092896,
+          0.25999999046325684,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8999999761581421,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0069",
+      "nombre": "Faldon_Frontal",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0,
+        1.2200000286102295,
+        0.2199999988079071
+      ],
+      "rotacion": [
+        0,
+        0,
+        12
+      ],
+      "escala": [
+        0.46000000834465027,
+        0.3400000035762787,
+        0.03999999910593033
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.18000000715255737,
+          0.1599999964237213,
+          0.14000000059604645,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.9300000071525574,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0070",
+      "nombre": "Faldon_Trasero",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0,
+        1.2000000476837158,
+        -0.20000000298023224
+      ],
+      "rotacion": [
+        0,
+        0,
+        -14
+      ],
+      "escala": [
+        0.4399999976158142,
+        0.30000001192092896,
+        0.03999999910593033
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.18000000715255737,
+          0.1599999964237213,
+          0.14000000059604645,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.9300000071525574,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0071",
+      "nombre": "Tirador_L",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -0.2199999988079071,
+        1.7799999713897705,
+        0.1599999964237213
+      ],
+      "rotacion": [
+        0,
+        0,
+        22
+      ],
+      "escala": [
+        0.05999999865889549,
+        0.1599999964237213,
+        0.029999999329447746
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.10000000149011612,
+          0.07000000029802322,
+          0.05000000074505806,
+          1
+        ],
+        "metallic": 0.05000000074505806,
+        "roughness": 0.75,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0072",
+      "nombre": "Tirador_R",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0.2199999988079071,
+        1.7799999713897705,
+        0.1599999964237213
+      ],
+      "rotacion": [
+        0,
+        0,
+        -20
+      ],
+      "escala": [
+        0.05999999865889549,
+        0.1599999964237213,
+        0.029999999329447746
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.10000000149011612,
+          0.07000000029802322,
+          0.05000000074505806,
+          1
+        ],
+        "metallic": 0.05000000074505806,
+        "roughness": 0.75,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0073",
+      "nombre": "Cinturon",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        0,
+        1.0499999523162842,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.5199999809265137,
+        0.10000000149011612,
+        0.47999998927116394
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.10000000149011612,
+          0.07000000029802322,
+          0.05000000074505806,
+          1
+        ],
+        "metallic": 0.05000000074505806,
+        "roughness": 0.75,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0074",
+      "nombre": "Venda_Brazo_L",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -0.6200000047683716,
+        1.2999999523162842,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        9
+      ],
+      "escala": [
+        0.14000000059604645,
+        0.09000000357627869,
+        0.14000000059604645
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.3400000035762787,
+          0.30000001192092896,
+          0.25999999046325684,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8999999761581421,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0075",
+      "nombre": "Venda_Brazo_R",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0.6200000047683716,
+        1.2999999523162842,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        -11
+      ],
+      "escala": [
+        0.14000000059604645,
+        0.09000000357627869,
+        0.14000000059604645
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.3400000035762787,
+          0.30000001192092896,
+          0.25999999046325684,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8999999761581421,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0076",
+      "nombre": "Venda_Mano_L",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -0.6200000047683716,
+        0.949999988079071,
+        0.019999999552965164
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.1599999964237213,
+        0.07000000029802322,
+        0.1599999964237213
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.3400000035762787,
+          0.30000001192092896,
+          0.25999999046325684,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8999999761581421,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0077",
+      "nombre": "Venda_Mano_R",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0.6200000047683716,
+        0.949999988079071,
+        0.019999999552965164
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.1599999964237213,
+        0.07000000029802322,
+        0.1599999964237213
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.3400000035762787,
+          0.30000001192092896,
+          0.25999999046325684,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.8999999761581421,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0078",
+      "nombre": "Pantalon_L",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -0.17000000178813934,
+        0.949999988079071,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.23999999463558197,
+        0.46000000834465027,
+        0.23999999463558197
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.18000000715255737,
+          0.1599999964237213,
+          0.14000000059604645,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.9300000071525574,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0079",
+      "nombre": "Pantalon_R",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0.17000000178813934,
+        0.949999988079071,
+        0
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.23999999463558197,
+        0.46000000834465027,
+        0.23999999463558197
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.18000000715255737,
+          0.1599999964237213,
+          0.14000000059604645,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.9300000071525574,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0080",
+      "nombre": "Tela_Rota_L",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        -0.20000000298023224,
+        0.6600000262260437,
+        0.11999999731779099
+      ],
+      "rotacion": [
+        12,
+        0,
+        15
+      ],
+      "escala": [
+        0.18000000715255737,
+        0.2199999988079071,
+        0.029999999329447746
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.18000000715255737,
+          0.1599999964237213,
+          0.14000000059604645,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.9300000071525574,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0081",
+      "nombre": "Tela_Rota_R",
+      "tipo": "primitiva",
+      "primitiva": "cubo",
+      "posicion": [
+        0.20000000298023224,
+        0.6600000262260437,
+        0.11999999731779099
+      ],
+      "rotacion": [
+        -10,
+        0,
+        -13
+      ],
+      "escala": [
+        0.18000000715255737,
+        0.2199999988079071,
+        0.029999999329447746
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.18000000715255737,
+          0.1599999964237213,
+          0.14000000059604645,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.9300000071525574,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0082",
+      "nombre": "Niebla1",
+      "tipo": "primitiva",
+      "primitiva": "plano",
+      "posicion": [
+        0,
+        1.2000000476837158,
+        -7
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        12,
+        4,
+        0.019999999552965164
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.6200000047683716,
+          0.6800000071525574,
+          0.7799999713897705,
+          0.1599999964237213
+        ],
+        "metallic": 0,
+        "roughness": 1,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "BLEND",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0083",
+      "nombre": "Niebla2",
+      "tipo": "primitiva",
+      "primitiva": "plano",
+      "posicion": [
+        0,
+        1.399999976158142,
+        7
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        12,
+        4,
+        0.019999999552965164
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.6200000047683716,
+          0.6800000071525574,
+          0.7799999713897705,
+          0.1599999964237213
+        ],
+        "metallic": 0,
+        "roughness": 1,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "BLEND",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0084",
+      "nombre": "Niegba3",
+      "tipo": "primitiva",
+      "primitiva": "plano",
+      "posicion": [
+        -5,
+        1,
+        -2
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.019999999552965164,
+        4,
+        12
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.6200000047683716,
+          0.6800000071525574,
+          0.7799999713897705,
+          0.1599999964237213
+        ],
+        "metallic": 0,
+        "roughness": 1,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "BLEND",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0085",
+      "nombre": "Niebla4",
+      "tipo": "primitiva",
+      "primitiva": "plano",
+      "posicion": [
+        5,
+        1,
+        2
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.019999999552965164,
+        4,
+        12
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.6200000047683716,
+          0.6800000071525574,
+          0.7799999713897705,
+          0.1599999964237213
+        ],
+        "metallic": 0,
+        "roughness": 1,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "BLEND",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0086",
+      "nombre": "LuzLuna",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        3.5,
+        5,
+        -4.5
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.6000000238418579,
+        2.200000047683716,
+        0.6000000238418579
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.7200000286102295,
+          0.8199999928474426,
+          1,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 1,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    },
+    {
+      "id": "obj_0087",
+      "nombre": "Contraluz",
+      "tipo": "primitiva",
+      "primitiva": "cilindro",
+      "posicion": [
+        -4,
+        3.5,
+        5
+      ],
+      "rotacion": [
+        0,
+        0,
+        0
+      ],
+      "escala": [
+        0.5,
+        1.7999999523162842,
+        0.5
+      ],
+      "visible": true,
+      "material": {
+        "nombre": "Predeterminado",
+        "baseColor": [
+          0.18000000715255737,
+          0.3199999928474426,
+          0.6200000047683716,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 1,
+        "emissive": [
+          0,
+          0,
+          0
+        ],
+        "alphaMode": "OPAQUE",
+        "alphaCutoff": 0.5
+      }
+    }
+  ],
+  "camara": {
+    "objetivo": [
+      0,
+      2.9499998092651367,
+      0
+    ],
+    "yaw": 3.497549057006836,
+    "pitch": 2.205078125,
+    "distancia": 36.63304901123047
+  }
+}

@@ -1,0 +1,3 @@
+Borrador de la sesión anterior (marca "Taller3D"): plan, prompt marcado done y log de
+pruebas de un prototipo cuya APK nunca llegó a compilarse en este entorno.
+La entrega real y verificada es la del BUILD superior: Forge3D Studio (app-release.apk).

@@ -1,0 +1,60 @@
+== C2: initialize ==
+  PASS  initialize → 200 — code=200
+  PASS  serverInfo presente — name=Taller3D-MCP
+  PASS  protocolVersion eco 
+  PASS  Mcp-Session-Id 
+== C3: tools/list >= 20 ==
+  PASS  tools/list → 200 con >=20 tools — total=25
+  PASS  todas las tools del LEEME/PROMPT presentes — faltan=[]
+== C4: crear_cubo + listar_escena bounds (metros) ==
+  PASS  crear_cubo ok 
+  PASS  bounds Y = [0, 1] m — bounds=[-0.5, 0.0, -0.5, 0.5, 1.0, 0.5]
+  PASS  bounds rueda Y = [0, 0.6] — bounds=[-0.3, 0.0, 0.41, 0.3, 0.6, 1.01]
+== transformar/material/duplicar/cámara ==
+  PASS  transformar_objeto trasladar 
+  PASS  aplicar_material 
+  PASS  duplicar_objeto 
+  PASS  camara_encuadrar 
+  PASS  camara_orbitar 
+  PASS  camara_zoom 
+  PASS  eliminar_objeto (duplicado) 
+== C6: guardar/cargar round-trip ==
+  PASS  guardar_proyecto 
+  PASS  escena vacía tras limpiar 
+  PASS  cargar_proyecto 
+  PASS  round-trip conserva objetos — 2 → 2
+  PASS  round-trip conserva triángulos 
+== C5: import OBJ + modelo.stl real + export GLB/glTF ==
+  PASS  import OBJ — 4 triángulos, 12 vértices
+  PASS  sniff modelo.stl → STL_ASCII — fmt=STL_ASCII
+  PASS  import modelo.stl (real del usuario) — 10466 triángulos
+  PASS  exportar_gltf glb 
+  PASS  GLB bytes > 0 — bytes=884632
+  PASS  magic glTF + v2 — magic=%08x v=2 total=884632 file=884632
+  PASS  longitud GLB correcta — header=884632 file=884632
+  PASS  chunk JSON 
+  PASS  glTF JSON válido: asset 2.0 
+  PASS  glTF: nodos/meshes/accesorios presentes — nodes=4 meshes=4
+  PASS  exportar_gltf gltf embebido 
+  PASS  gltf buffer base64 data URI 
+== límites y errores de protocolo ==
+  PASS  límite 300 objetos aplicado 
+  PASS  token inválido → 401 — code=401
+  PASS  sin token → 401 
+  PASS  JSON inválido → -32700 
+  PASS  método desconocido → -32601 
+  PASS  tool desconocida → -32602 
+  PASS  Origin ajeno → 403 (anti DNS-rebinding) — code=403
+  PASS  Host ajeno → 403 — code=403
+  PASS  Host legítimo → 200 — code=200
+  PASS  GET /mcp → 405 (solo JSON por POST) 
+== 3MF y FBX ==
+  PASS  import 3MF sintético — 1 triángulos, 3 vértices
+  PASS  import FBX ASCII parcial — FBX ASCII parcial: 4 triángulos (sin jerarquías/materiales)
+  PASS  FBX binario → mensaje claro (no soportado v1.0) 
+== JSON propio: round-trip ==
+  PASS  MiniJson round-trip 
+
+==========================================
+RESULTADO: 47 PASS / 0 FAIL
+TODAS LAS PRUEBAS DE ACEPTACIÓN: OK
