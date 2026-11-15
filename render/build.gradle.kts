@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kotlinAndroid)
 }
 
 android {
@@ -9,15 +9,6 @@ android {
 
     defaultConfig {
         minSdk = 29
-        externalNativeBuild {
-            cmake {
-                cppFlags += "-std=c++17 -O2 -Wall"
-                arguments "-DANDROID_STL=c++_shared"
-            }
-        }
-        ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
-        }
     }
 
     buildTypes {
@@ -26,18 +17,12 @@ android {
         }
     }
 
-    externalNativeBuild {
-        cmake {
-            path = "src/main/cpp/CMakeLists.txt"
-        }
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17
+        jvmTarget = "17"
     }
 }
 

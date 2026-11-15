@@ -2,6 +2,9 @@ package com.forge3d.studio.core.animation
 
 import com.forge3d.studio.core.math.Mat4
 import com.forge3d.studio.core.scene.Mesh
+import kotlin.math.abs
+import kotlin.math.cos
+import kotlin.math.sin
 import kotlin.math.sqrt
 
 /**

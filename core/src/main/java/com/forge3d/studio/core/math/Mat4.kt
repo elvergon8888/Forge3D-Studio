@@ -4,11 +4,8 @@ import kotlin.math.abs
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt
+import kotlin.math.tan
 
-/**
- * Matrices 4x4 en formato column-major (OpenGL).
- * Independiente de Android: testeable en JVM pura.
- */
 object Mat4 {
     private const val PI = 3.14159265358979323846
 

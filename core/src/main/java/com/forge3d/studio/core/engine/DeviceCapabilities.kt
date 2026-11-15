@@ -3,7 +3,7 @@ package com.forge3d.studio.core.engine
 import android.app.ActivityManager
 import android.content.Context
 import android.os.Build
-import android.util.Debug
+import android.os.Debug
 import android.util.Log
 
 object DeviceCapabilities {
