@@ -1,0 +1,37 @@
+#!/system/bin/sh
+TOKEN="IYO3YB26Rp-p3g7pqtLYND7VL85ZcTIpVp5OoFSr-q4"
+REMOTE_NAME="$1"
+REMOTE_URL="$2"
+REPO=$(echo "$REMOTE_URL" | sed 's|.*github.com/||' | sed 's/\.git$//')
+API_BASE="https://api.github.com/repos/$REPO"
+while read line; do
+    case "$line" in
+        capabilities)
+            echo "list"
+            echo "push"
+            echo ""
+            ;;
+        list)
+            curl -s -H "Authorization: Bearer $TOKEN" "$API_BASE/git/ref/heads" 2>/dev/null | python3 -c "
+import sys, json
+try:
+    data = json.load(sys.stdin)
+    for d in data:
+        print(f\"{d['ref']} {d['object']['sha']}\")
+except:
+    pass
+" 2>/dev/null
+            echo ""
+            ;;
+        push)
+            echo "ok"
+            while read line; do
+                [ -z "$line" ] && break
+                echo "ok $line"
+            done
+            ;;
+        *)
+            echo "ok $line"
+            ;;
+    esac
+done
