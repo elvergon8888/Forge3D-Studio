@@ -25,8 +25,10 @@ import android.widget.ScrollView
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
+import com.forge3d.studio.engine.DeviceCapabilities
 import com.forge3d.studio.engine.Material
 import com.forge3d.studio.engine.Math3D
+import com.forge3d.studio.engine.MemoryManager
 import com.forge3d.studio.engine.Mesh
 import com.forge3d.studio.engine.Primitives
 import com.forge3d.studio.engine.SceneObject
@@ -66,6 +68,10 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppModel.appContext = applicationContext
+
+        // Gestión de memoria: el perfil de capacidades y el registro de callbacks de trim.
+        MemoryManager.init(applicationContext)
+
         setContentView(R.layout.activity_main)
 
         viewport = findViewById(R.id.viewport)
@@ -101,7 +107,44 @@ class MainActivity : Activity() {
         refreshSelection()
         updateStats()
 
+        // Enlaza el gestor de memoria con el renderer GL y la escena, para poder
+        // liberar buffers y degradar la calidad cuando el sistema avise de presión.
+        MemoryManager.bind(
+            viewport,
+            object : MemoryManager.SceneResourceOwner {
+                override fun purgeUnusedMeshes(keepAtLeast: Int): Int {
+                    synchronized(AppModel.lock) {
+                        var freed = 0
+                        val s = AppModel.scene
+                        // Elimina mallas huérfanas del pool de liberación del renderer.
+                        while (AppModel.meshDeleteQueue.size > keepAtLeast) {
+                            AppModel.meshDeleteQueue.poll()
+                            freed++
+                        }
+                        return freed
+                    }
+                }
+
+                override fun onQualityChanged(q: DeviceCapabilities.Quality) = Unit
+            }
+        )
+
         handleIntent(intent)
+    }
+
+    /**
+     * El sistema pide liberar memoria. Delegamos en [MemoryManager], que decide si hay que
+     * soltar cachés, bajar la resolución de render o purgar mallas.
+     */
+    override fun onTrimMemory(level: Int) {
+        super.onTrimMemory(level)
+        MemoryManager.handleTrim(level)
+    }
+
+    /** Presión de memoria crítica: liberamos todo lo recuperable. */
+    override fun onLowMemory() {
+        super.onLowMemory()
+        MemoryManager.handleTrim(android.content.ComponentCallbacks2.TRIM_MEMORY_COMPLETE)
     }
 
     override fun onNewIntent(intent: Intent) {

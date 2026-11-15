@@ -54,6 +54,12 @@ object Primitives {
             val z = (r * sin(theta) * sin(phi)).toFloat()
             return floatArrayOf(x, y, z)
         }
+        // UVs esféricas: u = phi/(2PI), v = theta/PI
+        fun uvOf(i: Int, j: Int): FloatArray {
+            val u = (2.0 * PI * (i % segU) / segU).toFloat()
+            val v = (PI * (j % segV) / segV).toFloat()
+            return floatArrayOf(u, v)
+        }
         for (j in 0 until segV) {
             for (i in 0 until segU) {
                 val a = pt(i, j)
@@ -61,8 +67,12 @@ object Primitives {
                 val c = pt(i + 1, j + 1)
                 val d = pt(i, j + 1)
                 n[0] = a[0] / r; n[1] = a[1] / r; n[2] = a[2] / r
-                m.addTriangle(a, b, c, n)
-                m.addTriangle(a, c, d, n)
+                val ua = uvOf(i, j); val ub = uvOf(i + 1, j)
+                val uc = uvOf(i + 1, j + 1); val ud = uvOf(i, j + 1)
+                m.addTriangleUv(a[0], a[1], a[2], b[0], b[1], b[2], c[0], c[1], c[2],
+                    n[0], n[1], n[2], ua[0], ua[1], ub[0], ub[1], uc[0], uc[1])
+                m.addTriangleUv(a[0], a[1], a[2], c[0], c[1], c[2], d[0], d[1], d[2],
+                    n[0], n[1], n[2], ua[0], ua[1], uc[0], uc[1], ud[0], ud[1])
             }
         }
         return m

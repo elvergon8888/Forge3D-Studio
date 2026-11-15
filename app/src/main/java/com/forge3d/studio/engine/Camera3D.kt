@@ -1,6 +1,6 @@
 package com.forge3d.studio.engine
 
-import android.opengl.Matrix
+
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.tan
@@ -26,12 +26,12 @@ class Camera3D {
     }
 
     fun view(m: FloatArray) {
-        Matrix.setLookAtM(m, 0, eye[0], eye[1], eye[2], target[0], target[1], target[2], 0f, 1f, 0f)
+        Mat4.lookAt(m, 0, eye[0], eye[1], eye[2], target[0], target[1], target[2], 0f, 1f, 0f)
     }
 
     fun proj(m: FloatArray, width: Int, height: Int) {
         val aspect = if (height > 0) width.toFloat() / height.toFloat() else 1f
-        Matrix.perspectiveM(m, 0, 50f, aspect, 0.05f, 1000f)
+        Mat4.perspective(m, 0, 50f, aspect, 0.05f, 1000f)
     }
 
     fun orbit(dyaw: Float, dpitch: Float) {

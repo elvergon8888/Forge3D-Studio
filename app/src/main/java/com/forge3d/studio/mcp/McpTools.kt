@@ -1,8 +1,11 @@
 package com.forge3d.studio.mcp
 
+import com.forge3d.studio.engine.DeviceCapabilities
 import com.forge3d.studio.engine.Limits
 import com.forge3d.studio.engine.Material
+import com.forge3d.studio.engine.MemoryManager
 import com.forge3d.studio.engine.Mesh
+import com.forge3d.studio.engine.MeshOps
 import com.forge3d.studio.engine.Primitives
 import com.forge3d.studio.engine.SceneObject
 import com.forge3d.studio.io.FbxImporter
@@ -179,16 +182,50 @@ object McpTools {
                 s.clear()
                 ok("Escena vacía")
             } }),
-        ToolDef("token_generar", "Genera un nuevo token Bearer (el anterior queda inválido).", schema(),
+        ToolDef("token_generar", "Genera un nuevo token Bearer. En modo fijo (por defecto) devuelve el token estático sin cambiarlo.", schema(),
             { _ ->
                 val t = AuthManager.generar(AppModel.context())
-                JSONObject().put("token", t).toString()
+                JSONObject().put("token", t).put("modo", if (AuthManager.esRotativo(AppModel.context())) "rotativo" else "fijo").toString()
             }),
-        ToolDef("token_revocar", "Revoca el token Bearer actual.", schema(),
+        ToolDef("token_revocar", "Revoca el token Bearer persistido (solo afecta al modo rotativo).", schema(),
             { _ ->
                 AuthManager.revocar(AppModel.context())
                 ok("Token revocado")
-            })
+            }),
+        ToolDef("malla_weld", "Reconstruye la topología de un objeto: solda vértices duplicados y genera índices.", schema(
+            "id" to p("string", "Id del objeto"),
+            "epsilon" to p("number", "Tolerancia de soldadura en metros (defecto 1e-5)")),
+            { a -> mallaOperacion(a, "weld") }),
+        ToolDef("malla_subdividir", "Subdivide la malla de un objeto: cada triángulo se parte en 4.", schema(
+            "id" to p("string", "Id del objeto")),
+            { a -> mallaOperacion(a, "subdividir") }),
+        ToolDef("malla_extruir", "Extruye la malla de un objeto en la dirección de sus normales.", schema(
+            "id" to p("string", "Id del objeto"),
+            "cantidad" to p("number", "Distancia en metros (negativo reduce)")),
+            { a -> mallaOperacion(a, "extruir") }),
+        ToolDef("malla_bisel", "Bisela la malla de un objeto (contracción hacia el centro del triángulo).", schema(
+            "id" to p("string", "Id del objeto"),
+            "factor" to p("number", "0 = sin cambio, 1 = colapsa al centro")),
+            { a -> mallaOperacion(a, "bisel") }),
+        ToolDef("malla_normales", "Recalcula normales suavizadas (promedia las normales de las caras vecinas).", schema(
+            "id" to p("string", "Id del objeto")),
+            { a -> mallaOperacion(a, "normales") }),
+        ToolDef("malla_estadisticas", "Estadísticas topológicas de un objeto: vértices, aristas y triángulos únicos.", schema(
+            "id" to p("string", "Id del objeto")),
+            { a -> mallaOperacion(a, "estadisticas") }),
+        ToolDef("info_memoria", "Estado de memoria: presión, presupuesto de heap, pools, calidad gráfica y capacidades del dispositivo.", schema(),
+            { _ -> infoMemoria() }),
+        ToolDef("aplicar_textura", "Asigna mapas de textura PBR a un objeto: albedo, normal, roughness, metalness y AO (rutas dentro del almacenamiento de la app).", schema(
+            "id" to p("string", "Id del objeto"),
+            "albedo" to p("string", "Ruta de la textura de color base"),
+            "normal" to p("string", "Ruta del mapa de normales"),
+            "roughness" to p("string", "Ruta del mapa de rugosidad"),
+            "metalness" to p("string", "Ruta del mapa de metalicidad"),
+            "ao" to p("string", "Ruta del mapa de oclusión ambiental")),
+            { a -> aplicarTextura(a) }),
+        ToolDef("malla_uv", "Genera UVs automáticas (proyección planar) para un objeto sin coordenadas de textura.", schema(
+            "id" to p("string", "Id del objeto")),
+            { a -> mallaOperacion(a, "uv") })
     )
 
     // ---------- helpers ----------
@@ -275,6 +312,144 @@ object McpTools {
         if (m.has("alphaCutoff")) mt.alphaCutoff = m.getDouble("alphaCutoff").toFloat().coerceIn(0f, 1f)
         o.material.applyFrom(mt)
         objJson(o)
+    }
+
+    /**
+     * Operaciones de malla sobre un objeto de la escena.
+     *
+     * Todas se ejecutan bajo el lock de la escena y con el guard de memoria, de modo que
+     * un OOM no tumbe el proceso sino que degrade la calidad y devuelva un error claro.
+     */
+    private fun mallaOperacion(a: JSONObject, op: String): String = sync { s ->
+        val o = s.byId(a.optString("id")) ?: return@sync err("No existe ${a.optString("id")}")
+
+        // Las estadísticas no consumen memoria apreciable: se resuelven fuera del guard.
+        if (op == "estadisticas") {
+            val st = MeshOps.stats(o.mesh)
+            return@sync JSONObject()
+                .put("id", o.id)
+                .put("vertices_unicos", st.first)
+                .put("aristas_unicas", st.second)
+                .put("triangulos", st.third)
+                .toString()
+        }
+
+        val resultado: String? = MemoryManager.withMemoryGuard {
+            when (op) {
+                "weld" -> {
+                    val eps = a.optDouble("epsilon", MeshOps.WELD_EPSILON.toDouble()).toFloat()
+                    val top = MeshOps.weld(o.mesh, eps)
+                    val antes = o.mesh.triangleCount
+                    o.mesh = MeshOps.unwrap(top)
+                    "weld: $antes tri -> ${o.mesh.triangleCount} tri, ${top.vertCount} vertices unicos"
+                }
+
+                "subdividir" -> {
+                    val antes = o.mesh.triangleCount
+                    o.mesh = MeshOps.subdivide(o.mesh)
+                    "subdividir: $antes tri -> ${o.mesh.triangleCount} tri"
+                }
+
+                "extruir" -> {
+                    val cant = a.optDouble("cantidad", 0.05).toFloat()
+                    o.mesh = MeshOps.extrude(o.mesh, cant)
+                    "extruir: $cant m"
+                }
+
+                "bisel" -> {
+                    val f = a.optDouble("factor", 0.15).toFloat()
+                    o.mesh = MeshOps.bevel(o.mesh, f)
+                    "bisel: factor $f"
+                }
+
+                "normales" -> {
+                    MeshOps.smoothNormals(o.mesh)
+                    "normales recalculadas (suavizadas)"
+                }
+
+                "uv" -> {
+                    o.mesh.generatePlanarUv()
+                    "uvs generadas (proyeccion planar): ${o.mesh.vertCount} vertices"
+                }
+
+                else -> "Operación desconocida: $op"
+            }
+        }
+        if (resultado == null) {
+            err("No se pudo completar '$op': presión de memoria crítica")
+        } else if (resultado.startsWith("Operación")) {
+            err(resultado)
+        } else {
+            JSONObject().put("resultado", resultado).put("objeto", o.id).toString()
+        }
+    }
+
+    /**
+     * Asigna mapas de textura a un objeto.
+     *
+     * Las rutas se resuelven dentro del almacenamiento de la app (`Datos/` o ruta absoluta
+     * permitida). Se comprueba la existencia del archivo antes de asignarlo, para que el
+     * agente reciba un error claro en vez de una textura rota.
+     */
+    private fun aplicarTextura(a: JSONObject): String = sync { s ->
+        val o = s.byId(a.optString("id")) ?: return@sync err("No existe ${a.optString("id")}")
+        var asignadas = 0
+        val faltan = StringBuilder()
+
+        fun asignar(clave: String, setter: (String?) -> Unit) {
+            val ruta = a.optString(clave, "").trim()
+            if (ruta.isEmpty()) return
+            val f = File(ruta)
+            if (!f.exists()) {
+                faltan.append(clave).append(" ")
+                return
+            }
+            setter(f.absolutePath)
+            asignadas++
+        }
+
+        asignar("albedo") { o.material.albedoPath = it }
+        asignar("normal") { o.material.normalPath = it }
+        asignar("roughness") { o.material.roughnessPath = it }
+        asignar("metalness") { o.material.metalnessPath = it }
+        asignar("ao") { o.material.aoPath = it }
+
+        if (asignadas == 0) {
+            err("No se asigno ninguna textura. Revisa las rutas${if (faltan.isNotEmpty()) " (faltan: $faltan)" else ""}")
+        } else {
+            if (!o.mesh.hasUv) o.mesh.generatePlanarUv()
+            JSONObject()
+                .put("resultado", "$asignadas textura(s) asignadas")
+                .put("objeto", o.id)
+                .put("uvs", o.mesh.hasUv)
+                .toString()
+        }
+    }
+
+    /** Diagnóstico de memoria y capacidades del dispositivo. */
+    private fun infoMemoria(): String {
+        val p = MemoryManager.capabilities()
+        val snap = MemoryManager.snapshot()
+        val o = JSONObject()
+        o.put("presion_memoria", snap.presion)
+        o.put("calidad_grafica", snap.calidad)
+        o.put("heap_usado_mb", snap.heapUsado / 1024 / 1024)
+        o.put("heap_nativo_mb", snap.heapNativo / 1024 / 1024)
+        o.put("pool_bloques", snap.poolBloques)
+        if (p != null) {
+            o.put("dispositivo", p.model)
+            o.put("sdk", p.sdkInt)
+            o.put("ram_total_mb", p.totalRamBytes / 1024 / 1024)
+            o.put("ram_libre_mb", DeviceCapabilities.availableRam(AppModel.context()) / 1024 / 1024)
+            o.put("presupuesto_heap_mb", p.appHeapBudget / 1024 / 1024)
+            o.put("presupuesto_texturas_mb", p.textureBudget / 1024 / 1024)
+            o.put("formato_textura", p.textureFormat.name)
+            o.put("soporta_astc", p.supportsAstc)
+            o.put("soporta_etc2", p.supportsEtc2)
+            o.put("soporta_vulkan", p.supportsVulkan)
+            o.put("max_textura", p.maxTextureDimension(MemoryManager.quality()))
+        }
+        return o.toString()
     }
 
     private fun objJson(o: SceneObject): String {

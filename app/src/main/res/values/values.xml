@@ -1,23 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Forge3D Studio</string>
-    <string name="mcp_channel_name">Servidor MCP</string>
-    <string name="mcp_notif_title">Forge3D Studio</string>
-    <string name="mcp_notif_text">Editor MCP activo · 127.0.0.1:8080</string>
-
-    <color name="bg">#FF101418</color>
-    <color name="panel">#EE161B22</color>
-    <color name="surface">#FF1A2027</color>
-    <color name="accent">#FFFF7A29</color>
-    <color name="text">#FFE8ECF1</color>
-    <color name="textDim">#FF9AA6B2</color>
-    <color name="ic_launcher_background">#FF101418</color>
-
-    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
-        <item name="android:windowBackground">@color/bg</item>
-        <item name="android:statusBarColor">@color/bg</item>
-        <item name="android:navigationBarColor">@color/bg</item>
-        <item name="android:colorAccent">@color/accent</item>
-        <item name="android:colorButtonNormal">@color/surface</item>
+    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">#6200EE</item>
+        <item name="android:colorPrimaryDark">#3700B3</item>
+        <item name="android:colorAccent">#03DAC6</item>
     </style>
+    <string name="mcp_channel_name">Servidor MCP Forge3D</string>
+    <string name="mcp_notif_title">Forge3D MCP</string>
+    <string name="mcp_notif_text">Servidor MCP activo para agentes de IA</string>
 </resources>

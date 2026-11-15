@@ -1,15 +1,15 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.forge3d.studio"
+    namespace = "com.forge3d.studio.app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.forge3d.studio"
-        minSdk = 23
+        applicationId = "com.forge3d.studio.app"
+        minSdk = 29
         targetSdk = 35
         versionCode = 1
         versionName = "1.0.0"
@@ -17,7 +17,7 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("../keystore/forge3d.jks")
+            storeFile = rootProject.file("keystore/forge3d.jks")
             storePassword = "forge3d2026"
             keyAlias = "forge3d"
             keyPassword = "forge3d2026"
@@ -36,11 +36,21 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.11"
     }
 }
 
 dependencies {
-    // Cero dependencias externas: solo kotlin-stdlib y APIs del sistema Android.
-    // Sin Firebase, sin Ads, sin Amplitude, sin AndroidX.
+    implementation(project(":core"))
+    implementation(project(":render"))
+    implementation(project(":mcp-server"))
+    implementation(project(":mcp-client"))
+    implementation(project(":ui"))
+    implementation(libs.kotlinx.coroutines.android)
 }

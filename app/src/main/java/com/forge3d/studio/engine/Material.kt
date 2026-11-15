@@ -8,8 +8,19 @@ class Material(
     var roughness: Float = 0.6f,
     var emissive: FloatArray = floatArrayOf(0f, 0f, 0f),
     var alphaMode: String = "OPAQUE", // OPAQUE | BLEND | MASK
-    var alphaCutoff: Float = 0.5f
+    var alphaCutoff: Float = 0.5f,
+    /** Rutas de los mapas de textura (absolutas dentro del almacenamiento de la app). */
+    var albedoPath: String? = null,
+    var normalPath: String? = null,
+    var roughnessPath: String? = null,
+    var metalnessPath: String? = null,
+    var aoPath: String? = null
 ) {
+    /** `true` si el material referencia alguna textura. */
+    val hasTextures: Boolean
+        get() = albedoPath != null || normalPath != null || roughnessPath != null ||
+                metalnessPath != null || aoPath != null
+
     fun copy(): Material = Material(
         name,
         baseColor.copyOf(),
@@ -17,7 +28,12 @@ class Material(
         roughness,
         emissive.copyOf(),
         alphaMode,
-        alphaCutoff
+        alphaCutoff,
+        albedoPath,
+        normalPath,
+        roughnessPath,
+        metalnessPath,
+        aoPath
     )
 
     fun applyFrom(other: Material) {
@@ -27,6 +43,11 @@ class Material(
         other.emissive?.let { emissive = it.copyOf() }
         alphaMode = other.alphaMode
         alphaCutoff = other.alphaCutoff
+        albedoPath = other.albedoPath
+        normalPath = other.normalPath
+        roughnessPath = other.roughnessPath
+        metalnessPath = other.metalnessPath
+        aoPath = other.aoPath
     }
 
     companion object {

@@ -1,6 +1,6 @@
 package com.forge3d.studio.engine
 
-import android.opengl.Matrix
+
 
 object Limits {
     const val MAX_OBJECTS = 300
@@ -10,9 +10,30 @@ object Limits {
 class SceneObject(
     val id: String,
     var name: String,
-    val mesh: Mesh,
+    mesh: Mesh,
     val material: Material = Material()
 ) {
+    /**
+     * Malla del objeto.
+     *
+     * Es `var` porque las operaciones de edición (subdividir, extruir, bisel, soldar) generan
+     * una malla nueva. Al reasignar se mantiene el refcount: la malla anterior solo se libera
+     * (y se encola para `glDeleteBuffers`) cuando su último usuario desaparece.
+     */
+    var mesh: Mesh = mesh
+        set(value) {
+            val vieja = field
+            field = value
+            if (vieja !== value) {
+                vieja.users--
+                if (vieja.users <= 0) {
+                    vieja.needsUpload = false
+                    // El renderer borrará el VBO cuando le llegue la cola de liberación.
+                    com.forge3d.studio.mcp.AppModel.meshDeleteQueue.add(vieja)
+                }
+            }
+        }
+
     val position = floatArrayOf(0f, 0f, 0f)   // metros
     val rotation = floatArrayOf(0f, 0f, 0f)   // grados X,Y,Z
     val scale = floatArrayOf(1f, 1f, 1f)
@@ -27,12 +48,12 @@ class SceneObject(
     private val tmpModel = FloatArray(16)
 
     fun modelMatrix(out: FloatArray) {
-        Matrix.setIdentityM(out, 0)
-        Matrix.translateM(out, 0, position[0], position[1], position[2])
-        Matrix.rotateM(out, 0, rotation[0], 1f, 0f, 0f)
-        Matrix.rotateM(out, 0, rotation[1], 0f, 1f, 0f)
-        Matrix.rotateM(out, 0, rotation[2], 0f, 0f, 1f)
-        Matrix.scaleM(out, 0, scale[0], scale[1], scale[2])
+        Mat4.identity(out, 0)
+        Mat4.translate(out, 0, position[0], position[1], position[2])
+        Mat4.rotate(out, 0, rotation[0], 1f, 0f, 0f)
+        Mat4.rotate(out, 0, rotation[1], 0f, 1f, 0f)
+        Mat4.rotate(out, 0, rotation[2], 0f, 0f, 1f)
+        Mat4.scale(out, 0, scale[0], scale[1], scale[2])
     }
 
     /** AABB mundo en [out] (6). */

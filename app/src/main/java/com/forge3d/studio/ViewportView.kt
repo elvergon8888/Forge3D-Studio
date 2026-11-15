@@ -5,8 +5,10 @@ import android.content.Context
 import android.opengl.GLSurfaceView
 import android.util.AttributeSet
 import android.view.MotionEvent
+import com.forge3d.studio.engine.DeviceCapabilities
 import com.forge3d.studio.engine.GLRenderer
 import com.forge3d.studio.engine.Math3D
+import com.forge3d.studio.engine.MemoryManager
 import com.forge3d.studio.engine.Mesh
 import com.forge3d.studio.engine.Primitives
 import com.forge3d.studio.engine.SceneObject
@@ -17,8 +19,12 @@ import kotlin.math.hypot
 /**
  * Viewport táctil: 1 dedo = órbita o transformar objeto seleccionado,
  * 2 dedos = pinch zoom + desplazar, toque corto = seleccionar.
+ *
+ * Implementa [MemoryManager.GlResourceOwner] para poder reducir la resolución de render y
+ * liberar buffers cuando el sistema avisa de presión de memoria.
  */
-class ViewportView(context: Context, attrs: AttributeSet?) : GLSurfaceView(context, attrs) {
+class ViewportView(context: Context, attrs: AttributeSet?) : GLSurfaceView(context, attrs),
+    MemoryManager.GlResourceOwner {
 
     companion object {
         const val MODE_ORBIT = 0
@@ -50,6 +56,35 @@ class ViewportView(context: Context, attrs: AttributeSet?) : GLSurfaceView(conte
     }
 
     fun renderer(): GLRenderer = renderer
+
+    // ---------------- MemoryManager.GlResourceOwner ----------------
+
+    /**
+     * Reduce la resolución real de la superficie de render.
+     *
+     * Se usa `setFixedSize` en lugar de tocar `glViewport` porque así el framebuffer completo
+     * sigue siendo coherente con el sistema de coordenadas y el picking por raycast no se
+     * desalinea.
+     */
+    override fun setRenderScale(scale: Float) {
+        val s = scale.coerceIn(0.25f, 1.0f)
+        renderer.setRenderScale(s)
+        if (width > 0 && height > 0) {
+            val w = (width * s).toInt().coerceAtLeast(64)
+            val h = (height * s).toInt().coerceAtLeast(64)
+            holder.setFixedSize(w, h)
+        }
+    }
+
+    /** Libera los buffers GPU; la reconstrucción ocurre en el siguiente frame. */
+    override fun releaseGlResources() {
+        renderer.releaseGlResources()
+    }
+
+    /** Aplica la calidad gráfica vigente. */
+    override fun applyQuality(q: DeviceCapabilities.Quality) {
+        renderer.applyQuality(q)
+    }
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onTouchEvent(ev: MotionEvent): Boolean {

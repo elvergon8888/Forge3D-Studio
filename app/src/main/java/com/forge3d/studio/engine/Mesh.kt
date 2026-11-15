@@ -13,6 +13,16 @@ class Mesh {
         private set
     var nrm = FloatArray(4096)
         private set
+
+    /**
+     * Coordenadas de textura (2 floats por vértice). Vacío si la malla no tiene UVs.
+     *
+     * Los importers existentes no generan UVs; las primitivas sí (esfera y cilindro con
+     * proyección esférica/cilíndrica) para que el material texturizado tenga sentido.
+     */
+    var uv = FloatArray(0)
+        private set
+
     var used = 0 // floats ocupados (3 por vértice)
         private set
 
@@ -36,7 +46,72 @@ class Mesh {
             pos = pos.copyOf(cap)
             nrm = nrm.copyOf(cap)
         }
+        // Reserva de UVs: 2 floats por vértice.
+        val uvNeeded = (used + extra) / 3 * 2
+        if (uv.size < uvNeeded) uv = uv.copyOf(uvNeeded)
     }
+
+    /**
+     * Número de vértices que tienen UV asignada realmente.
+     * Si es menor que [vertCount], la malla se considera sin texturizar.
+     */
+    private var uvWritten = 0
+
+    /** `true` si la malla tiene coordenadas de textura para todos sus vértices. */
+    val hasUv: Boolean get() = vertCount > 0 && uvWritten >= vertCount
+
+    /**
+     * Asigna las UVs de la malla a partir de una lista plana de 2 floats por vértice.
+     * Si la lista no tiene el tamaño exacto, se ignora (la malla se queda sin UVs).
+     */
+    fun setUv(u: FloatArray) {
+        if (u.size != vertCount * 2) return
+        uv = u
+        uvWritten = vertCount
+    }
+
+    /**
+     * Genera UVs automáticas por proyección planar sobre el eje dominante de cada triángulo.
+     * Es un fallback para mallas importadas sin UVs: al menos el material texturizado
+     * muestra algo coherente en vez de negro.
+     */
+    fun generatePlanarUv() {
+        if (vertCount == 0) return
+        val out = FloatArray(vertCount * 2)
+        var o = 0
+        var v = 0
+        while (o + 9 <= used) {
+            // Eje dominante del triángulo
+            val nx = meshNormalX(o)
+            val ny = meshNormalY(o)
+            val nz = meshNormalZ(o)
+            val ax = kotlin.math.abs(nx); val ay = kotlin.math.abs(ny); val az = kotlin.math.abs(nz)
+            val uAxis = when {
+                ax >= ay && ax >= az -> 1  // proyectar en YZ
+                ay >= az -> 2            // proyectar en XZ
+                else -> 0                // proyectar en XY
+            }
+            for (k in 0..2) {
+                val vo = o + k * 3
+                val x = pos[vo]; val y = pos[vo + 1]; val z = pos[vo + 2]
+                val uu: Float; val vv: Float
+                when (uAxis) {
+                    1 -> { uu = z; vv = y }
+                    2 -> { uu = x; vv = z }
+                    else -> { uu = x; vv = y }
+                }
+                out[v * 2] = uu
+                out[v * 2 + 1] = vv
+                v++
+            }
+            o += 9
+        }
+        uv = out
+    }
+
+    private fun meshNormalX(o: Int) = nrm[o]
+    private fun meshNormalY(o: Int) = nrm[o + 1]
+    private fun meshNormalZ(o: Int) = nrm[o + 2]
 
     private fun growBounds(ax: Float, ay: Float, az: Float, bx: Float, by: Float, bz: Float, cx: Float, cy: Float, cz: Float) {
         minX = min(minX, min(ax, min(bx, cx))); maxX = max(maxX, max(ax, max(bx, cx)))
@@ -59,6 +134,36 @@ class Mesh {
         nrm[o + 3] = nx; nrm[o + 4] = ny; nrm[o + 5] = nz
         nrm[o + 6] = nx; nrm[o + 7] = ny; nrm[o + 8] = nz
         used += 9
+        growBounds(ax, ay, az, bx, by, bz, cx, cy, cz)
+    }
+
+    /**
+     * Añade un triángulo con coordenadas de textura por vértice.
+     * Si la malla no tiene array de UVs, se ignoran (el shader usará 0,0).
+     */
+    fun addTriangleUv(
+        ax: Float, ay: Float, az: Float,
+        bx: Float, by: Float, bz: Float,
+        cx: Float, cy: Float, cz: Float,
+        nx: Float, ny: Float, nz: Float,
+        u0: Float, v0: Float, u1: Float, v1: Float, u2: Float, v2: Float
+    ) {
+        ensure(9)
+        var o = used
+        pos[o] = ax; pos[o + 1] = ay; pos[o + 2] = az
+        pos[o + 3] = bx; pos[o + 4] = by; pos[o + 5] = bz
+        pos[o + 6] = cx; pos[o + 7] = cy; pos[o + 8] = cz
+        nrm[o] = nx; nrm[o + 1] = ny; nrm[o + 2] = nz
+        nrm[o + 3] = nx; nrm[o + 4] = ny; nrm[o + 5] = nz
+        nrm[o + 6] = nx; nrm[o + 7] = ny; nrm[o + 8] = nz
+        used += 9
+        if (uv.size >= (used / 3) * 2) {
+            val u = (used - 9) / 3 * 2
+            uv[u] = u0; uv[u + 1] = v0
+            uv[u + 2] = u1; uv[u + 3] = v1
+            uv[u + 4] = u2; uv[u + 5] = v2
+            uvWritten += 3
+        }
         growBounds(ax, ay, az, bx, by, bz, cx, cy, cz)
     }
 
@@ -87,6 +192,42 @@ class Mesh {
             o += 9
         }
         needsUpload = true
+    }
+
+    /**
+     * Añade un vértice suelto (sin formar triángulo).
+     * Útil para reconstruir mallas vértice a vértice (p. ej. tras deformación por skinning).
+     */
+    fun addVertex(
+        x: Float, y: Float, z: Float,
+        nx: Float, ny: Float, nz: Float
+    ) {
+        ensure(3)
+        var o = used
+        pos[o] = x; pos[o + 1] = y; pos[o + 2] = z
+        nrm[o] = nx; nrm[o + 1] = ny; nrm[o + 2] = nz
+        used += 3
+        if (x < minX) minX = x; if (x > maxX) maxX = x
+        if (y < minY) minY = y; if (y > maxY) maxY = y
+        if (z < minZ) minZ = z; if (z > maxZ) maxZ = z
+    }
+
+    /** Recalcula el AABB local a partir de las posiciones actuales. */
+    fun recomputeBounds() {
+        minX = Float.MAX_VALUE; minY = Float.MAX_VALUE; minZ = Float.MAX_VALUE
+        maxX = -Float.MAX_VALUE; maxY = -Float.MAX_VALUE; maxZ = -Float.MAX_VALUE
+        var i = 0
+        while (i + 3 <= used) {
+            val x = pos[i]; val y = pos[i + 1]; val z = pos[i + 2]
+            if (x < minX) minX = x; if (x > maxX) maxX = x
+            if (y < minY) minY = y; if (y > maxY) maxY = y
+            if (z < minZ) minZ = z; if (z > maxZ) maxZ = z
+            i += 3
+        }
+        if (used == 0) {
+            minX = 0f; minY = 0f; minZ = 0f
+            maxX = 0f; maxY = 0f; maxZ = 0f
+        }
     }
 
     /** Rellena [out] (6) con AABB mundo usando la matriz de modelo [m]. */
